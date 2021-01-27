@@ -5,7 +5,7 @@ import LoginPage from './components/LoginPage';
 import LogoutLink from './components/LogoutLink';
 
 function App() {
-  // 分かりやすいように'margin: 50px'を適用しています。
+  // 分かりやすいように'margin: 50px'を適用しています。//
   return (
     <div className="App" style={{ margin: 50 }}>
       <Chat />
