@@ -22,11 +22,22 @@ class Auth extends Component {
   }
 
   logout = (e = null) => {
+    if (e) e.preventDefault()
+    localStorage.setItem('me', null)
+    this.setState({
+      me: null,
+      isLoggedIn: false
+    })
     
   }
   
   render() {
-    return this.props.children()
+    const props = {
+      me: this.me,
+      isLoggedIn: this.isLoggedIn,
+      ...this.state
+    }
+    return this.props.children(props)
   }
 }
 
