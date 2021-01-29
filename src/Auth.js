@@ -32,12 +32,11 @@ class Auth extends Component {
   }
   
   render() {
-    const props = {
-      me: this.me,
-      isLoggedIn: this.isLoggedIn,
-      ...this.state
+    const authInfo = {
+      login: this.login,
+      logout: this.logout
     }
-    return this.props.children(props)
+    return this.props.children(authInfo)
   }
 }
 
