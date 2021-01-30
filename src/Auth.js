@@ -34,7 +34,8 @@ class Auth extends Component {
   render() {
     const authInfo = {
       login: this.login,
-      logout: this.logout
+      logout: this.logout,
+      ...this.state
     }
     return this.props.children(authInfo)
   }
